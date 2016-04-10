@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1C5FB18F41C48A3137C71073CD956C44BEBAFB4A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6F999EB920D4F2FD8FEBD7B6C3E53B1782E2D9E9" : 0,
+    "1C5FB18F41C48A3137C71073CD956C44BEBAFB4A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "17421C61-ABC9-4F0C-9CED-AC39DE05B1CC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6F999EB920D4F2FD8FEBD7B6C3E53B1782E2D9E9" : "",
+    "1C5FB18F41C48A3137C71073CD956C44BEBAFB4A" : "lab3\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InertialMotion",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InertialMotion.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JorrieB\/S062Lab3",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1C5FB18F41C48A3137C71073CD956C44BEBAFB4A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JorrieB\/6.S062.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F999EB920D4F2FD8FEBD7B6C3E53B1782E2D9E9"
+    }
+  ]
+}
