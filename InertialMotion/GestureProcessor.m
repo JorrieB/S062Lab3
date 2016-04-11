@@ -79,9 +79,14 @@ static NSString *const labels[N_LABELS+1] = {@"A", @"B", @"C", @"D", @"E", @"F",
   
   // -- TASK 1B --
   double features[N_FEATURES] = {};
+  for (int i = 0; i < N_FEATURES; i++) {
+    features[i] = floor((i+1)/N_FEATURES);
+  }
+  
   // Classify each point according to which zone of a 3x3 Tic-Tac-Toe board it would fall in
   // Compute the time spent in each zone and the distance traveled horizontally and vertically
   double totalTime = rescaledSamples[count - 1].t - rescaledSamples[0].t;
+  NSLog(@"the first time is %f, the last is %f",rescaledSamples[0].t,rescaledSamples[count - 1].t);
   for (int i = 1; i < count; i++) {
     Sample2D start = rescaledSamples[i-1];
     Sample2D end = rescaledSamples[i];
