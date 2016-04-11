@@ -81,7 +81,7 @@ static NSString *const labels[N_LABELS+1] = {@"A", @"B", @"C", @"D", @"E", @"F",
   double features[N_FEATURES] = {};
   // Classify each point according to which zone of a 3x3 Tic-Tac-Toe board it would fall in
   // Compute the time spent in each zone and the distance traveled horizontally and vertically
-  
+  double totalTime = rescaledSamples[count - 1].t - rescaledSamples[0].t;
   for (int i = 1; i < count; i++) {
     Sample2D start = rescaledSamples[i-1];
     Sample2D end = rescaledSamples[i];
@@ -91,9 +91,9 @@ static NSString *const labels[N_LABELS+1] = {@"A", @"B", @"C", @"D", @"E", @"F",
     int xSector = MIN(start.x * 3, 2);
     int ySector = MIN(start.y * 3, 2);
     //use xSector and ySector as two digits in base three
-    features[xSector + ySector * 3] = features[xSector + ySector * 3] + (end.t - start.t);
-    features[xSector + ySector * 3 + 1] = features[xSector + ySector * 3] + (end.x - start.x);
-    features[xSector + ySector * 3 + 2] = features[xSector + ySector * 3] + (end.y - start.y);
+    features[xSector * 3 + ySector * 9] = features[xSector * 3 + ySector * 9] + (end.t - start.t);
+    features[xSector * 3 + ySector * 9 + 1] = features[xSector * 3 + ySector * 9 + 1] + (end.x - start.x);
+    features[xSector * 3 + ySector * 9 + 2] = features[xSector * 3 + ySector * 9 + 2] + (end.y - start.y);
     
   }
   
@@ -119,11 +119,6 @@ static NSString *const labels[N_LABELS+1] = {@"A", @"B", @"C", @"D", @"E", @"F",
   int best_label = N_LABELS;
   double best_score = -INFINITY;
 
-//  for i in range(N_LABELS):
-//    score = 0
-//    for j in range(N_FEATURES):
-//      score += features[j] * weights[i][j]
-//# do something with score
   for (int i = 0; i < N_LABELS; i++) {
     double score = 0;
     for (int j = 0; j < N_FEATURES; j++) {
